@@ -21,52 +21,54 @@ class App extends React.Component {
         <Router>
           <div className="App">
             <header>
-              <img src={logo} className="App-logo" alt="logo" />
-              <div className="companyName">
-                <span>互怡企業</span>
-                <span>HUH-YI Enterprise Co.,Ltd</span>
+              <div >
+                <nav className="nav-flex">
+                  <ul >
+                    <li><img src={logo} className="App-logo" alt="logo" /></li>
+                    <li className="companyName">
+                      <span>互怡企業</span>
+                      <span>HUH-YI Enterprise Co.,Ltd</span>
+                    </li>
+                    <li>
+                      <NavLink to="/">
+                        <span>關於互怡</span>
+                        <span>About us</span>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/product">
+                        <span>產品型錄</span>
+                        <span>Products</span>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/contact">
+                        <span>聯絡我們</span>
+                        <span>Contact us</span>
+                      </NavLink>
+                    </li>
+                    <li><input type="text" placeholder="Search.."></input></li>
+                  </ul>
+                </nav>
               </div>
-              <nav>
-                <ul>
-                  <li>
-                    <NavLink to="/">
-                      <span>關於互怡</span>
-                      <span>About us</span>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/product">
-                      <span>產品型錄</span>
-                      <span>Products</span>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/contact">
-                      <span>聯絡我們</span>
-                      <span>Contact us</span>
-                    </NavLink>
-                  </li>
-                </ul>
-              </nav>
-              </header>
-              <Switch>
-                <Route path="/product">
-                  <Product />
-                </Route>
-                <Route path="/contact">
-                  <Contact />
-                </Route>
-                >
-                <Route path="/">
-                  <HomePage />
-                </Route>
-              </Switch>
-            
+            </header>
+            <Switch>
+              <Route path="/product">
+                <Product />
+              </Route>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              >
+              <Route path="/">
+                <HomePage />
+              </Route>
+            </Switch>
           </div>
         </Router>
 
-        <HomePage/>
-        <Footer/>
+        <HomePage />
+        <Footer />
       </React.Fragment>
     );
   }
