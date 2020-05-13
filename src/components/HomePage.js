@@ -2,13 +2,14 @@ import React from "react";
 import brand from "../assets/images/brand.png";
 import product from "../assets/images/product-sample.png";
 
+
 function HomePage() {
   return (
     <React.Fragment>
       <img src={brand} className="brand-picture" alt="brand" />
-      
-      <section className="section-container">
-        <h3>關於我們 About us</h3>
+
+      <section className="aboutus-section-container">
+        <h3 className="aboutus-section-title">關於我們 About us</h3>
         <p>
           互怡企業有限公司創立於1991年，位於台南市仁德區，專營OA辦公家具、屏風、辦公桌、工作桌、工具車、椅子、效率櫃、鐵櫃、樹德產品、與辦公室週邊產品。
           「為客戶提供最優質與舒適辦公環境」是我們的信條，
@@ -28,8 +29,8 @@ function HomePage() {
           service and products.
         </p>
       </section>
-      <section className="section-container">
-        <h3>我們的產品 Featured products</h3>
+      <section className="product-section-container">
+        <h3 className="product-section-title"><span>我們的產品</span><span>Featured products</span></h3>
         <div className="product-container">
           <div className="product-items">
             <img
@@ -54,8 +55,12 @@ function HomePage() {
           </div>
         </div>
 
-        <button type="button">查看更多產品 Explore more</button>
+        <button type="button" className="btn btn-light mb-5">查看更多產品 Explore more</button>
       </section>
+      <section className="space-section-container">
+      <div className="space-div"></div>
+      </section>
+      
     </React.Fragment>
   );
 }
