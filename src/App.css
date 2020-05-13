@@ -1,5 +1,5 @@
- /*general style*/
- *,
+/*general style*/
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -15,20 +15,29 @@
   --clr-light: #fff;
   --clr-dark: rgb(59, 56, 56);
   --clr-accent: rgb(221, 217, 217);
+  --clr-line: rgb(167, 14, 14);
 
-  --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
-  --fs-h3: 1rem;
+  --fs-h3: 1.25rem;
   --fs-body: 1rem;
   --fs-nav: 0.8rem;
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
- header {
-   display: flex;
-   
- }
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+p {
+  font-size: var(--fs-body);
+}
+
+/*header section*/
+header {
+  display: flex;
+  flex-direction: row;
+}
 span {
   display: block;
 }
@@ -37,31 +46,26 @@ span {
   width: 50px;
   height: 50px;
   padding: 10px 0px 10px 20px;
-  
 }
 
 .companyName {
-  padding: 20px 0px 50px 0px;
-margin-right: auto;
-font-size: var(--fs-nav);
+  padding: 1.5em 4em 3em 4em;
+  
+  font-size: var(--fs-nav);
 }
 
-
-
 nav ul {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   list-style: none;
-  display:flex;
+  display: flex;
   flex-direction: row;
   background-color: white;
 }
 
-
-
- nav ul li a {
-  display:block;
-  padding: 20px 50px 50px 50px;
+nav ul li a {
+  display: block;
+  padding: 1.5em 4em 3em 4em;
   text-decoration: none;
   color: var(--clr-dark);
   font-size: var(--fs-nav);
@@ -71,8 +75,71 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
+/*brand image style*/
+
 .brand-picture {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
+/*about us section*/
+.aboutus-section-container {
+  margin-top: 10em;
+  padding-left: 15em;
+  padding-right: 15em;
+}
+
+.aboutus-section-title {
+  padding-bottom: 1.25em;
+  border-bottom-style: solid;
+  border-bottom-color: var(--clr-line);
+}
+
+.aboutus-section-container p {
+  padding-top: 2em;
+}
+
+/*featured-product section*/
+.product-section-container {
+  text-align: center;
+  background-color: var(--clr-accent);
+  margin-top: 10em;
+}
+
+.product-section-title {
+  display: inline-block;
+  margin: 0;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.25em;
+  padding-bottom: 3em;
+}
+
+.product-items {
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+}
+/*space*/
+.space-section-container {
+  background-color: var(--clr-light);
+  margin-top: 5em;
+}
+
+/*footer section*/
+
+.footer-info-container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--clr-accent);
+}
+
+.footer-info-details {
+  padding-top: 2em;
+}
+
