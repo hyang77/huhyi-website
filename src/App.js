@@ -24,7 +24,7 @@ class App extends React.Component {
               <img src={logo} className="App-logo" alt="logo" />
               <div className="companyName">
                 <span>互怡企業</span>
-                <span>HUH-YI Enterprise Co.,Ltd</span>{" "}
+                <span>HUH-YI Enterprise Co.,Ltd</span>
               </div>
               <nav>
                 <ul>
@@ -48,6 +48,7 @@ class App extends React.Component {
                   </li>
                 </ul>
               </nav>
+              </header>
               <Switch>
                 <Route path="/product">
                   <Product />
@@ -60,7 +61,7 @@ class App extends React.Component {
                   <HomePage />
                 </Route>
               </Switch>
-            </header>
+            
           </div>
         </Router>
 
