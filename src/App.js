@@ -65,9 +65,7 @@ class App extends React.Component {
               </Route>
             </Switch>
           </div>
-        </Router>
-
-        <HomePage />
+        </Router> 
         <Footer />
       </React.Fragment>
     );
