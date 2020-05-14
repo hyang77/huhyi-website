@@ -155,5 +155,20 @@ nav ul li a:hover {
 /*contact section*/
 .contact-section-container {
   display:flex;
-  margin: 5em;
+  padding-left: 6em;
+  padding-right:6em;
+}
+
+.contact-section-title {
+  font-size: var(--fs-body);
+}
+
+.contact-info-items {
+  padding-left: 2em;
+  padding-right:2em;
+}
+
+#map {
+  width: 500px;
+  height: 450px;
 }
