@@ -152,3 +152,8 @@ nav ul li a:hover {
   padding-top: 2em;
 }
 
+/*contact section*/
+.contact-section-container {
+  display:flex;
+  margin: 5em;
+}
