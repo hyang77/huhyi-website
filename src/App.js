@@ -21,14 +21,18 @@ class App extends React.Component {
         <Router>
           <div className="App">
             <header>
-              <div >
+              <div className="nav-container">
+                <img src={logo} className="App-logo" alt="logo" />
+                <div className="companyName">
+                  <span>互怡企業</span><span>HUH-YI Enterprise Co.,Ltd</span>
+                </div>
+                <div className="companyName Navbar__Link-toggle">
+                  <i className="fas fa-bars"></i>
+                </div>
+                
+
                 <nav className="nav-flex">
-                  <ul >
-                    <li><img src={logo} className="App-logo" alt="logo" /></li>
-                    <li className="companyName">
-                      <span>互怡企業</span>
-                      <span>HUH-YI Enterprise Co.,Ltd</span>
-                    </li>
+                  <ul>
                     <li>
                       <NavLink to="/">
                         <span>關於互怡</span>
@@ -47,9 +51,11 @@ class App extends React.Component {
                         <span>Contact us</span>
                       </NavLink>
                     </li>
-                    <li><input type="text" placeholder="Search.."></input></li>
                   </ul>
                 </nav>
+
+                <input id="search" type="text" placeholder="Search.."></input>
+                
               </div>
             </header>
             <Switch>
@@ -65,7 +71,7 @@ class App extends React.Component {
               </Route>
             </Switch>
           </div>
-        </Router> 
+        </Router>
         <Footer />
       </React.Fragment>
     );
