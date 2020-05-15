@@ -33,6 +33,13 @@ p {
   font-size: var(--fs-body);
 }
 
+/*brand image style*/
+
+.brand-picture {
+  width: 100%;
+  height: auto;
+}
+
 /*header section*/
 .nav-flex {
   display: flex;
@@ -45,36 +52,35 @@ span {
 }
 
 .App-logo {
-  width: 31px;
-  height: 31px;
-  margin-top: 1.5em;
+  width: 2.5em;
+  height: 2.5em;
+  margin-right: 0.5em;
 }
 
 .companyName {
-  padding: 1.5em 4em 3em 0.5em;
+  margin-right: auto;
   color: var(--clr-dark);
   font-size: var(--fs-nav);
 }
 
-input {
-  margin-top: 1.5em;
+.nav-container {
+  padding: 1.5em 4em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
-
-
-
 nav ul {
-  padding: 0;
-  margin: 0;
   list-style: none;
   display: flex;
   flex-direction: row;
-  background-color: white;
 }
 
-nav ul li a  {
+nav ul li a {
   display: block;
-  padding: 1.5em 4em 3em 4em;
+  margin-left: 1.5em;
+  margin-right: 4em;
+  padding-bottom: 1.5em;
   text-decoration: none;
   color: var(--clr-dark);
   font-size: var(--fs-nav);
@@ -82,31 +88,31 @@ nav ul li a  {
 
 nav ul li a:hover {
   cursor: pointer;
+  text-decoration: none;
+  border-bottom: solid;
+  border-bottom-color: var(--clr-line);
+  color: var(--clr-dark);
 }
 
-/*brand image style*/
-
-.brand-picture {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.Navbar__Link-toggle {
+  display: none;
 }
 
 /*about us section*/
 .aboutus-section-container {
-  margin-top: 10em;
-  padding-left: 15em;
-  padding-right: 15em;
+  padding: 10em 15em 0em 15em;
 }
 
 .aboutus-section-title {
   padding-bottom: 1.25em;
   border-bottom-style: solid;
   border-bottom-color: var(--clr-line);
+  font-size: var(--fs-h3);
 }
 
 .aboutus-section-container p {
   padding-top: 2em;
+  font-size: var(--fs-body);
 }
 
 /*featured-product section*/
@@ -152,11 +158,11 @@ nav ul li a:hover {
   padding-top: 2em;
 }
 
-/*contact section*/
+/*contact page*/
 .contact-section-container {
-  display:flex;
+  display: flex;
   padding-left: 6em;
-  padding-right:6em;
+  padding-right: 6em;
 }
 
 .contact-section-title {
@@ -165,10 +171,93 @@ nav ul li a:hover {
 
 .contact-info-items {
   padding-left: 2em;
-  padding-right:2em;
+  padding-right: 2em;
 }
 
 #map {
   width: 500px;
   height: 450px;
+}
+
+/*product page*/
+
+
+
+
+
+
+
+
+
+/*media query(max-width: 768px)*/
+@media only screen and (max-width: 768px) {
+  .nav-container {
+    background-color: var(--clr-accent);
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .companyName {
+    margin-right: 0;
+    display: flex;
+    padding-left: 2.5em;
+  }
+
+  .Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .App-logo {
+    align-self: flex-start;
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  #search,
+  nav ul {
+    display: none;
+  }
+
+  .product-container {
+    display: inline-flex;
+    flex-direction: column;
+    display: block;
+  }
+
+  .product-items {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .product-sample {
+    min-width: 300px;
+  }
+
+  .aboutus-section-container {
+    padding: 3em 6em 0em 6em;
+  }
+
+  .product-section-container {
+    margin-top: 5em;
+  }
+
+  .product-section-title {
+    padding-bottom: 0;
+  }
+
+  .product-items {
+    padding-left:0;
+    padding-right: 0;
+  }
+
 }
