@@ -26,26 +26,24 @@ class App extends React.Component {
                 <div className="companyName">
                   <span>互怡企業</span><span>HUH-YI Enterprise Co.,Ltd</span>
                 </div>
-                <div className="companyName Navbar__Link-toggle">
-                  <i className="fas fa-bars"></i>
-                </div>
                 
-
                 <nav className="nav-flex">
-                  <ul>
-                    <li>
+                  <label id=""htmlFor="toggle">&#9776;</label>
+                  <input type="checkbox" id="toggle" />
+                  <ul id="menu">
+                    <li className="menu-list">
                       <NavLink to="/">
                         <span>關於互怡</span>
                         <span>About us</span>
                       </NavLink>
-                    </li>
-                    <li>
+                    </li >
+                    <li className="menu-list">
                       <NavLink to="/product">
                         <span>產品型錄</span>
                         <span>Products</span>
                       </NavLink>
                     </li>
-                    <li>
+                    <li className="menu-list">
                       <NavLink to="/contact">
                         <span>聯絡我們</span>
                         <span>Contact us</span>
