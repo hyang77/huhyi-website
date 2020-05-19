@@ -1,7 +1,7 @@
 import React from "react";
 import brand from "../assets/images/brand.png";
 import product from "../assets/images/product-sample.png";
-
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -30,7 +30,10 @@ function HomePage() {
         </p>
       </section>
       <section className="product-section-container">
-        <h3 className="product-section-title"><span>我們的產品</span><span>Featured products</span></h3>
+        <h3 className="product-section-title">
+          <span>我們的產品</span>
+          <span>Featured products</span>
+        </h3>
         <div className="product-container">
           <div className="product-items">
             <img
@@ -54,13 +57,15 @@ function HomePage() {
             />
           </div>
         </div>
-
-        <button type="button" className="btn btn-light mb-5">查看更多產品 Explore more</button>
+        <Link to="/product">
+          <button type="button" className="btn btn-light mb-5">
+            查看更多產品 Explore more
+          </button>
+        </Link>
       </section>
       <section className="space-section-container">
-      <div className="space-div"></div>
+        <div className="space-div"></div>
       </section>
-      
     </React.Fragment>
   );
 }
