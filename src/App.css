@@ -253,8 +253,14 @@ label {
 
 .items {
   background-color: var(--clr-accent);
-  padding: 300px 300px;
-  margin:2em;
+  margin: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div.items > img {
+  margin: 1em;
 }
 
 /*tablet mode*/
