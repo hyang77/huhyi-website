@@ -3,11 +3,14 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link,
   NavLink,
+  Redirect,
 } from "react-router-dom";
 import Screenseries from "./Screenseries";
 import Chairseries from "./Chairseries";
 import Deskseries from "./Deskseries";
+import ExecutiveDesk from "./ExecutiveDesk";
 
 class Product extends React.Component {
   constructor(props) {
@@ -53,7 +56,8 @@ class Product extends React.Component {
                   onClick={() => this.isSelected(2)}
                 >
                   <NavLink to="/product/chairs">
-                    椅子系列 Chairs<div className="fa fa-caret-down right"></div>
+                    椅子系列 Chairs
+                    <div className="fa fa-caret-down right"></div>
                   </NavLink>
                   <ul
                     className={`collapsible ${
@@ -81,7 +85,7 @@ class Product extends React.Component {
                     }`}
                   >
                     <li>
-                      <a href="#">主管桌</a>
+                      <Link to="/product/desks/executive">主管桌</Link>
                     </li>
                     <li>
                       <a href="#">會議桌</a>
@@ -99,6 +103,9 @@ class Product extends React.Component {
           </div>
           <div className="product-page-boxes">
             <Switch>
+              <Route path="/product/desks/executive">
+                <ExecutiveDesk />
+              </Route>
               <Route path="/product/screens">
                 <Screenseries />
               </Route>
@@ -108,6 +115,8 @@ class Product extends React.Component {
               <Route path="/product/desks">
                 <Deskseries />
               </Route>
+
+              <Redirect from="/product" to="/product/screens" />
             </Switch>
           </div>
         </div>
