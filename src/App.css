@@ -186,8 +186,8 @@ label {
 /*product page*/
 .product-nav {
   position: relative;
-  margin: 50px;
-  width: 360px;
+  margin: 2em;
+  width: 240px;
 }
 .product-nav ul {
   list-style: none;
@@ -237,6 +237,24 @@ label {
 
 .collapsible.open {
   display: block;
+}
+
+.product-page-container {
+  display: flex;
+}
+
+/*product-page-items*/
+
+.title {
+  margin: 2em;
+  border-left: 2px solid var(--clr-line);
+  padding: 10px 20px;
+}
+
+.items {
+  background-color: var(--clr-accent);
+  padding: 300px 300px;
+  margin:2em;
 }
 
 /*tablet mode*/
@@ -295,7 +313,7 @@ label {
     margin-bottom: 5px;
   }
 
-  /*product page*/
+  /*product section*/
   .product-container {
     display: inline-flex;
     flex-direction: column;
