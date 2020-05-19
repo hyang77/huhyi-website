@@ -13,12 +13,14 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
         <Router>
+          <ScrollToTop>
           <div className="App">
             <header>
               <div className="nav-container">
@@ -69,6 +71,7 @@ class App extends React.Component {
               </Route>
             </Switch>
           </div>
+          </ScrollToTop>
         </Router>
         <Footer />
       </React.Fragment>
