@@ -29,32 +29,62 @@ function HomePage() {
           service and products.
         </p>
       </section>
-      <section className="product-section-container">
-        <h3 className="product-section-title">
+      <section className="featured-product-section-container">
+        <h3 className="featured-product-section-title">
           <span>我們的產品</span>
-          <span>Featured products</span>
+          <span>Our products</span>
         </h3>
-        <div className="product-container">
-          <div className="product-items">
-            <img
-              src={product}
-              className="product-sample"
-              alt="product-sample"
-            />
+        <div className="featured-product-container">
+
+          <div className="content featured-product-items">
+            <Link to="/product/screens">
+              <div className="content-overlay"></div>
+              <img
+                src={require("../assets/images/screens/ty0023.jpg")}
+                className="featured-product-sample"
+                alt="晶鑽系列 2.5CM"
+              />
+              <div className="content-details fadeIn-bottom">
+                <h3 className="content-title">
+                  <span>屏風</span>
+                  <span>Screens</span>
+                </h3>
+              </div>
+            </Link>
           </div>
-          <div className="product-items">
-            <img
-              src={product}
-              className="product-sample"
-              alt="product-sample"
-            />
+
+          <div className="content featured-product-items">
+            <Link to="/product/chairs">
+            <div className="content-overlay"></div>
+              <img
+                src={require("../assets/images/chairs/public-line-chairs/022b.jpg")}
+                className="featured-product-sample"
+                alt="排椅 022b"
+              />
+              <div className="content-details fadeIn-bottom">
+                <h3 className="content-title">
+                  <span>椅子系列</span>
+                  <span>Chairs</span>
+                </h3>
+              </div>
+            </Link>
           </div>
-          <div className="product-items">
-            <img
-              src={product}
-              className="product-sample"
-              alt="product-sample"
-            />
+
+          <div className="content featured-product-items">
+            <Link to="/product/desks">
+            <div className="content-overlay"></div>
+              <img
+                src={require("../assets/images/desks/office/cd-desks/AF-120-2-w.jpg")}
+                className="featured-product-sample"
+                alt="CD型辦公桌 AF-120-2-w"
+              />
+              <div className="content-details fadeIn-bottom">
+                <h3 className="content-title">
+                  <span>辦公桌系列</span>
+                  <span>Office Desks</span>
+                </h3>
+              </div>
+            </Link>
           </div>
         </div>
         <Link to="/product">
