@@ -19,7 +19,7 @@ function Footer() {
           <div className="footer-info-details">
               <p>公司地址</p>
               <p>(717) 台南市仁德區太新路82號</p>
-              <Link to="/contact"><p>查看地圖</p></Link>
+              <Link to="/contact"><p id="seeMap">查看地圖</p></Link>
               
           </div>
         </div>

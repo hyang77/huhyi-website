@@ -31,25 +31,8 @@ class Product extends React.Component {
           <div className="product-page-boxes">
             <nav className="product-nav">
               <ul>
-                <li
-                  className="product-sub-menu"
-                  onClick={() => this.isSelected(1)}
-                >
-                  <NavLink to="/product/screens">
-                    屏風 Screens<div className="fa fa-caret-down right"></div>
-                  </NavLink>
-                  <ul
-                    className={`collapsible ${
-                      this.state.active === 1 ? "open" : null
-                    }`}
-                  >
-                    <li>
-                      <a href="#">2.5cm屏風</a>
-                    </li>
-                    <li>
-                      <a href="#">桌上屏風</a>
-                    </li>
-                  </ul>
+                <li>
+                  <NavLink exact to="/product/screens" activeClassName="selected">屏風 Screens</NavLink>
                 </li>
                 <li
                   className="product-sub-menu"
