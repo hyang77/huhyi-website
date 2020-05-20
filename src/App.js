@@ -21,59 +21,62 @@ class App extends React.Component {
       <React.Fragment>
         <Router>
           <ScrollToTop>
-          <div className="App">
-            <header>
-              <div className="nav-container">
-                <img src={logo} className="App-logo" alt="logo" />
-                <div className="companyName">
-                  <span>互怡企業</span><span>HUH-YI Enterprise Co.,Ltd</span>
-                </div>
-                
-                <nav className="nav-flex">
-                  <label id=""htmlFor="toggle">&#9776;</label>
-                  <input type="checkbox" id="toggle" />
-                  <ul id="menu">
-                    <li className="menu-list">
-                      <NavLink to="/">
-                        <span>關於互怡</span>
-                        <span>About us</span>
-                      </NavLink>
-                    </li >
-                    <li className="menu-list">
-                      <NavLink to="/product">
-                        <span>產品型錄</span>
-                        <span>Products</span>
-                      </NavLink>
-                    </li>
-                    <li className="menu-list">
-                      <NavLink to="/contact">
-                        <span>聯絡我們</span>
-                        <span>Contact us</span>
-                      </NavLink>
-                    </li>
-                  </ul>
-                </nav>
+            <div className="App">
+              <header>
+                <div className="nav-container">
+                  <img src={logo} className="App-logo" alt="logo" />
+                  <div className="companyName">
+                    <span>互怡企業</span>
+                    <span>HUH-YI Enterprise Co.,Ltd</span>
+                  </div>
 
-                <input id="search" type="text" placeholder="Search.."></input>
-                
-              </div>
-            </header>
-            <Switch>
-              <Route path="/product">
-                <Product />
-              </Route>
-              <Route path="/contact">
-                <Contact />
-              </Route>
-              >
-              <Route path="/">
-                <HomePage />
-              </Route>
-            </Switch>
-          </div>
+                  <nav className="nav-flex">
+                    <label id="" htmlFor="toggle">
+                      &#9776;
+                    </label>
+                    <input type="checkbox" id="toggle" />
+                    <ul id="menu">
+                      <li className="menu-list">
+                        <NavLink to="/">
+                          <span>關於互怡</span>
+                          <span>About us</span>
+                        </NavLink>
+                      </li>
+                      <li className="menu-list">
+                        <NavLink to="/product">
+                          <span>產品型錄</span>
+                          <span>Products</span>
+                        </NavLink>
+                      </li>
+                      <li className="menu-list">
+                        <NavLink to="/contact">
+                          <span>聯絡我們</span>
+                          <span>Contact us</span>
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </nav>
+
+                  <input id="search" type="text" placeholder="Search.."></input>
+                </div>
+              </header>
+              <Switch>
+                <Route path="/product">
+                  <Product />
+                </Route>
+                <Route path="/contact">
+                  <Contact />
+                </Route>
+                >
+                <Route path="/">
+                  <HomePage />
+                </Route>
+              </Switch>
+            </div>
           </ScrollToTop>
+
+          <Footer />
         </Router>
-        <Footer />
       </React.Fragment>
     );
   }
