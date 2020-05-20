@@ -1,6 +1,24 @@
 import React from "react";
 
 class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      姓名: "",
+      聯絡電話: "",
+      Email: "",
+      主旨: "",
+      內容: "",
+    };
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleInputChange(evt) {
+    this.setState({ [evt.target.name]: evt.target.value });
+  }
+  
+
   getGoogleMaps() {
     // If we haven't already defined the promise, define it
     if (!this.googleMapsPromise) {
@@ -60,22 +78,29 @@ class Contact extends React.Component {
                 as soon as possible.
               </span>
             </div>
-            <form>
+            <form
+              action="https://formspree.io/uee850312@gmail.com"
+              method="POST"
+            >
               <div className="form-row">
                 <div className="form-group col-md-6 mt-2">
                   <input
                     type="text"
                     className="form-control"
-                    id="name"
                     placeholder="姓名 Name"
+                    name="姓名"
+                    value={this.state.姓名}
+                    onChange={this.handleInputChange}
                   ></input>
                 </div>
                 <div className="form-group col-md-6 mt-2 ">
                   <input
                     type="number"
                     className="form-control"
-                    id="phone"
                     placeholder="電話 Phone"
+                    name="聯絡電話"
+                    value={this.state.聯絡電話}
+                    onChange={this.handleInputChange}
                   ></input>
                 </div>
               </div>
@@ -83,30 +108,34 @@ class Contact extends React.Component {
                 <input
                   type="email"
                   className="form-control"
-                  id="email"
                   placeholder="Email"
+                  name="Email"
+                  value={this.state.Email}
+                  onChange={this.handleInputChange}
                 ></input>
               </div>
               <div className="form-group">
                 <input
                   type="text"
                   className="form-control"
-                  id="subject"
                   placeholder="主旨 Subject"
+                  name="主旨"
+                  value={this.state.主旨}
+                  onChange={this.handleInputChange}
                 ></input>
               </div>
               <div className="form-group">
                 <textarea
                   className="form-control"
-                  id="message"
                   rows="5"
                   placeholder="您的訊息 Message"
+                  name="內容"
+                  value={this.state.內容}
+                  onChange={this.handleInputChange}
                 ></textarea>
               </div>
               <div className="text-center">
-                <button type="button" className="btn btn-light mb-5 ">
-                  確認送出 Send
-                </button>
+                <input type="submit" value="確認寄出 Send"></input>
               </div>
             </form>
           </div>
