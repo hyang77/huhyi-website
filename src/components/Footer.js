@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 function Footer() {
   return (
@@ -18,7 +19,8 @@ function Footer() {
           <div className="footer-info-details">
               <p>公司地址</p>
               <p>(717) 台南市仁德區太新路82號</p>
-              <p>查看地圖</p>
+              <Link to="/contact"><p>查看地圖</p></Link>
+              
           </div>
         </div>
       </section>
