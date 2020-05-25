@@ -14,7 +14,7 @@
 
   --clr-light: #fff;
   --clr-dark: rgb(59, 56, 56);
-  --clr-accent: rgb(221, 217, 217);
+  --clr-accent: rgb(220,220,220);
   --clr-line: rgb(167, 14, 14);
 
   --fs-h3: 1.25rem;
@@ -86,7 +86,7 @@ span {
   font-size: var(--fs-nav);
 }
 
-.menu-list a:hover {
+.menu a.active, .menu-list a:hover {
   cursor: pointer;
   text-decoration: none;
   border-bottom: solid;
@@ -251,22 +251,29 @@ label {
 }
 
 /*product page*/
+
+.rounded-corner-container {
+  border-radius: 0px 25px 25px 20px;
+  background-color: var(--clr-accent);
+  padding-bottom: 200px;
+  margin-bottom: 3em;
+}
 .product-nav {
   position: relative;
-  margin: 2em;
+  margin: 1em;
+  padding-top: 1em;
   width: 240px;
+  
 }
 .product-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.product-sub-menu {
-  /* Sub Menu */
-}
+
 .product-nav ul li a {
   display: block;
-  background: #ebebeb;
+  background: var(--clr-accent);
   padding: 10px 15px;
   color: #333;
   text-decoration: none;
@@ -276,26 +283,35 @@ label {
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
 }
+
+
 .product-nav ul li a:hover {
   color: #515151;
+  background: #e7e2e2;
 }
+
 .product-nav ul li a .fa {
   width: 16px;
   text-align: center;
   margin-right: 5px;
   float: right;
 }
-.product-nav ul ul {
-  background-color: #ebebeb;
-}
+
+
+
 
 .product-sub-menu ul li a {
-  background: #f8f8f8;
+ 
   border-left: 4px solid transparent;
   padding: 10px 20px;
 }
+
+.product-sub-menu ul li a.active {
+  border-left: 2px solid var(--clr-line);
+}
 .product-sub-menu ul li a:hover {
   border-left: 2px solid var(--clr-line);
+  
 }
 
 .collapsible {
@@ -319,15 +335,37 @@ label {
 }
 
 .items {
-  background-color: var(--clr-accent);
   margin: 2em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+.items div {
+  width: 155px;
+  border: solid var(--clr-accent);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0em 2em 2em 0em;
 
-div.items > img {
-  margin: 1em;
+  align-items: center;
+  color: var(--clr-dark);
+}
+.items div img {
+  width: 150px;
+  max-width: 150px;
+  height: auto;
+  flex: 1;
+}
+
+.items div a,
+.items div a:hover {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+.desk-items div:hover,
+.chair-items div:hover {
+  transform: translateY(-6px);
 }
 
 /*tablet mode*/

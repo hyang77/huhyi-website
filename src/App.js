@@ -1,11 +1,6 @@
 import React from "react";
 import "./App.css";
-import logo from "./assets/images/logo.jpg";
-
-import HomePage from "./components/HomePage";
 import Footer from "./components/Footer";
-import Product from "./components/Product";
-import Contact from "./components/Contact";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,23 +8,61 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
+import logo from "./assets/images/logo.jpg";
+
 import ScrollToTop from "./components/ScrollToTop";
+import HomePage from "./components/HomePage";
+import Product from "./components/Product";
+import Contact from "./components/Contact";
+import Search from "./components/Search";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { disableLink: false, searchInput: "" };
+    this.handleSearchInput = this.handleSearchInput.bind(this);
+    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
+  }
+
+  handleSearchSubmit(e) {
+    if(this.state.searchInput === '') {
+      e.preventDefault()
+      alert('請輸入關鍵字(1-10字之間)');
+    }
+  }
+
+  handleSearchInput(e) {
+    this.setState({ searchInput: e.target.value });
+  }
+
   render() {
+    const companyName = {
+      english: "HUH-YI Enterprise Co.,Ltd",
+      mandarin: "互怡企業",
+    };
+    /*
+    const product = {
+      english: {chair:["Folding Chair","Public Line Chair"],desk:["Executive","Meeting", Office["CD Desk"],"screen"]
+    };
+    */
+    const product = {
+      chair: ["Folding Chair", "Public Line Chair"],
+      desks: ["Office Desk", "Meeting Table", "Executive Desk"],
+      screens: ["Screens"],
+    };
+
     return (
       <React.Fragment>
         <Router>
           <ScrollToTop>
             <div className="App">
               <header>
-                <div className="nav-container">
-                  <img src={logo} className="App-logo" alt="logo" />
+                <nav className="nav-container">
+                  <img className="App-logo" src={logo} alt="logo" />
                   <div className="companyName">
-                    <span>互怡企業</span>
-                    <span>HUH-YI Enterprise Co.,Ltd</span>
+                    <span>{companyName.mandarin}</span>
+                    <span>{companyName.english}</span>
                   </div>
-
                   <nav className="nav-flex">
                     <label id="" htmlFor="toggle">
                       &#9776;
@@ -37,45 +70,60 @@ class App extends React.Component {
                     <input type="checkbox" id="toggle" />
                     <ul id="menu">
                       <li className="menu-list">
-                        <NavLink to="/">
+                        <NavLink exact activeClassName="active" to="/">
                           <span>關於互怡</span>
                           <span>About us</span>
                         </NavLink>
                       </li>
                       <li className="menu-list">
-                        <NavLink to="/product">
+                        <NavLink activeClassName="active" to="/product">
                           <span>產品型錄</span>
                           <span>Products</span>
                         </NavLink>
                       </li>
                       <li className="menu-list">
-                        <NavLink to="/contact">
+                        <NavLink activeClassName="active" to="/contact">
                           <span>聯絡我們</span>
                           <span>Contact us</span>
                         </NavLink>
                       </li>
                     </ul>
                   </nav>
-
-                  <input id="search" type="text" placeholder="Search.."></input>
-                </div>
+                  <form>
+                    <input
+                      className="search"
+                      type="text"
+                      placeholder="產品搜尋 Search.."
+                      onChange={this.handleSearchInput}
+                      value={this.state.searchInput}
+                    ></input>
+                    <Link to="/product/search">
+                      <button
+                        className="search "
+                        type="submit"
+                        onClick={this.handleSearchSubmit}
+                      >
+                        <i className="search fas fa-search"></i>
+                      </button>
+                    </Link>
+                  </form>
+                </nav>
+                <Switch>
+                  <Route path="/product">
+                    <Product searchInput={this.state.searchInput} />
+                  </Route>
+                  <Route path="/contact">
+                    <Contact />
+                  </Route>
+                  >
+                  <Route exact path="/">
+                    <HomePage />
+                  </Route>
+                </Switch>
               </header>
-              <Switch>
-                <Route path="/product">
-                  <Product />
-                </Route>
-                <Route path="/contact">
-                  <Contact />
-                </Route>
-                >
-                <Route path="/">
-                  <HomePage />
-                </Route>
-              </Switch>
             </div>
+            <Footer />
           </ScrollToTop>
-
-          <Footer />
         </Router>
       </React.Fragment>
     );
