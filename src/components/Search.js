@@ -2,11 +2,8 @@ import React from "react";
 class Search extends React.Component {
     constructor(props){
         super(props);
-        this.state = {searchResult:[]}
-        
+        this.state = {test: "desks/desk-meeting/"}
     }
-
-    
   render() {
     const meetingDeskList = [
       "CONF-D-N",
@@ -16,13 +13,26 @@ class Search extends React.Component {
       "MY-1860-5_w",
       "nc180",
     ];
-    const officeDeskList = ["AF-120-1-w", "AF-120-2-w", "AF-120-4-w"];
-    const executiveDeskList = ["SD-01_SD-03", "SD-021"];
 
+    const pattern = this.props.searchInput;
+    const newPattern = new RegExp(pattern, "i");
+    const filtername = meetingDeskList.filter((str) => newPattern.test(str));
     return (
       <React.Fragment>
         <div className="title" style={{ borderLeftColor: "transparent" }}>
           "{this.props.searchInput}" 搜尋結果
+        </div>
+        <div className="items">
+          {filtername.map((filtername) => (
+            <div>
+              <img
+                key={filtername}
+                src={require(`../assets/images/${this.state.test}${filtername}.jpg`)}
+                alt={filtername}
+              />
+              <p>{filtername}</p>
+            </div>
+          ))}
         </div>
       </React.Fragment>
     );
