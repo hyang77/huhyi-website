@@ -33,7 +33,10 @@ class App extends React.Component {
 
   handleSearchInput(e) {
     this.setState({ searchInput: e.target.value });
+    
   }
+
+  
 
   render() {
     const companyName = {
