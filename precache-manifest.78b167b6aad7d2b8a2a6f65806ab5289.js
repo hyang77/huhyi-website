@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ca01d64db33d4b1713c4dbe95f89ee8a",
+    "revision": "9bbfd7d86b937d57392886616e29dcb1",
     "url": "/huhyi-website/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/huhyi-website/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "5f2004817edf9c6a2956",
+    "revision": "795f24d510ced02abcee",
     "url": "/huhyi-website/static/css/main.c320ee6a.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/huhyi-website/static/js/2.ce24102b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5f2004817edf9c6a2956",
-    "url": "/huhyi-website/static/js/main.84a5f86d.chunk.js"
+    "revision": "795f24d510ced02abcee",
+    "url": "/huhyi-website/static/js/main.0fb8cf26.chunk.js"
   },
   {
     "revision": "17740060f6c3f7923fa8",
