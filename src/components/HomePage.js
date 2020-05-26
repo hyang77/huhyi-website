@@ -9,14 +9,14 @@ function HomePage() {
       <img src={brand} className="brand-picture" alt="brand" />
 
       <section className="aboutus-section-container">
-        <h3 className="aboutus-section-title">關於我們 About us</h3>
-        <p>
+        <h3 className="aboutus-section-title" data-aos="fade-up" data-aos-duration="2500">關於我們 About us</h3>
+        <p data-aos="fade-up" data-aos-duration="2500">
           互怡企業有限公司創立於1991年，位於台南市仁德區，專營OA辦公家具、屏風、辦公桌、工作桌、工具車、椅子、效率櫃、鐵櫃、樹德產品、與辦公室週邊產品。
           「為客戶提供最優質與舒適辦公環境」是我們的信條，
           幫助客戶找到符合各自需求的辦公家具，並提供辦公空間規畫建議，從需求諮詢，
           家具選擇到規劃分析，提供最專業的服務。
         </p>
-        <p>
+        <p data-aos="fade-up" data-aos-duration="2500">
           Huh-yi Enterprise Co.,Ltd was established in 1991 in Taiwan Tainan, is
           a professional office furniture supplier. Our products include office
           desks, meeting tables, task chairs, office cabinets, screens, and
@@ -36,7 +36,7 @@ function HomePage() {
         </h3>
         <div className="featured-product-container">
 
-          <div className="content featured-product-items">
+          <div className="content featured-product-items" data-aos="zoom-in" data-aos-duration="1500">
             <Link to="/product/screens">
               <div className="content-overlay"></div>
               <img
@@ -53,7 +53,7 @@ function HomePage() {
             </Link>
           </div>
 
-          <div className="content featured-product-items">
+          <div className="content featured-product-items" data-aos="zoom-in" data-aos-duration="1500">
             <Link to="/product/chairs">
             <div className="content-overlay"></div>
               <img
@@ -70,7 +70,7 @@ function HomePage() {
             </Link>
           </div>
 
-          <div className="content featured-product-items">
+          <div className="content featured-product-items" data-aos="zoom-in" data-aos-duration="1500">
             <Link to="/product/desks">
             <div className="content-overlay"></div>
               <img

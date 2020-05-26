@@ -92,17 +92,17 @@ class App extends React.Component {
                       </li>
                     </ul>
                   </nav>
-                  <form>
+                  <form className="search">
                     <input
                       className="search"
                       type="text"
-                      placeholder="產品搜尋 Search.."
+                      placeholder="產品型號搜尋 Search.."
                       onChange={this.handleSearchInput}
                       value={this.state.searchInput}
                     ></input>
                     <Link to="/product/search">
                       <button
-                        className="search "
+                        className="search"
                         type="submit"
                         onClick={this.handleSearchSubmit}
                       >
