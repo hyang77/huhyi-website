@@ -25,18 +25,15 @@ class App extends React.Component {
   }
 
   handleSearchSubmit(e) {
-    if(this.state.searchInput === '') {
-      e.preventDefault()
-      alert('請輸入關鍵字(1-10字之間)');
+    if (this.state.searchInput === "") {
+      e.preventDefault();
+      alert("請輸入關鍵字(1-10字之間)");
     }
   }
 
   handleSearchInput(e) {
     this.setState({ searchInput: e.target.value });
-    
   }
-
-  
 
   render() {
     const companyName = {
@@ -73,7 +70,11 @@ class App extends React.Component {
                     <input type="checkbox" id="toggle" />
                     <ul id="menu">
                       <li className="menu-list">
-                        <NavLink exact activeClassName="active" to="/">
+                        <NavLink
+                          exact
+                          activeClassName="active"
+                          to="/huhyi-website/"
+                        >
                           <span>關於互怡</span>
                           <span>About us</span>
                         </NavLink>
@@ -119,7 +120,7 @@ class App extends React.Component {
                     <Contact />
                   </Route>
                   >
-                  <Route exact path="/">
+                  <Route exact path="/huhyi-website/">
                     <HomePage />
                   </Route>
                 </Switch>
