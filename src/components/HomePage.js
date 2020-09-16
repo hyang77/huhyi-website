@@ -1,6 +1,5 @@
 import React from "react";
-import brand from "../assets/images/brand.png";
-import product from "../assets/images/product-sample.png";
+import brand from "../assets/images/brand-image.jpg";
 import { Link } from "react-router-dom";
 
 function HomePage() {
@@ -9,7 +8,13 @@ function HomePage() {
       <img src={brand} className="brand-picture" alt="brand" />
 
       <section className="aboutus-section-container">
-        <h3 className="aboutus-section-title" data-aos="fade-up" data-aos-duration="2500">關於我們 About us</h3>
+        <h3
+          className="aboutus-section-title"
+          data-aos="fade-up"
+          data-aos-duration="2500"
+        >
+          關於我們 About us
+        </h3>
         <p data-aos="fade-up" data-aos-duration="2500">
           互怡企業有限公司創立於1991年，位於台南市仁德區，專營OA辦公家具、屏風、辦公桌、工作桌、工具車、椅子、效率櫃、鐵櫃、樹德產品、與辦公室週邊產品。
           「為客戶提供最優質與舒適辦公環境」是我們的信條，
@@ -35,8 +40,11 @@ function HomePage() {
           <span>Our products</span>
         </h3>
         <div className="featured-product-container">
-
-          <div className="content featured-product-items" data-aos="zoom-in" data-aos-duration="1500">
+          <div
+            className="content featured-product-items"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <Link to="/product/screens">
               <div className="content-overlay"></div>
               <img
@@ -53,9 +61,13 @@ function HomePage() {
             </Link>
           </div>
 
-          <div className="content featured-product-items" data-aos="zoom-in" data-aos-duration="1500">
+          <div
+            className="content featured-product-items"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <Link to="/product/chairs">
-            <div className="content-overlay"></div>
+              <div className="content-overlay"></div>
               <img
                 src={require("../assets/images/chairs/public-line-chairs/022b.jpg")}
                 className="featured-product-sample"
@@ -70,9 +82,13 @@ function HomePage() {
             </Link>
           </div>
 
-          <div className="content featured-product-items" data-aos="zoom-in" data-aos-duration="1500">
+          <div
+            className="content featured-product-items"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <Link to="/product/desks">
-            <div className="content-overlay"></div>
+              <div className="content-overlay"></div>
               <img
                 src={require("../assets/images/desks/office/cd-desks/AF-120-2-w.jpg")}
                 className="featured-product-sample"
