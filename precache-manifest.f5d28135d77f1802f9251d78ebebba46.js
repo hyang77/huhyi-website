@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9bbfd7d86b937d57392886616e29dcb1",
+    "revision": "ad366d8ec7613c3633b87396b7a505ad",
     "url": "/huhyi-website/index.html"
   },
   {
-    "revision": "5171d85674856fbbd3bb",
-    "url": "/huhyi-website/static/css/2.af3c1da9.chunk.css"
+    "revision": "a3e3770c7024b7dc3ad7",
+    "url": "/huhyi-website/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "795f24d510ced02abcee",
-    "url": "/huhyi-website/static/css/main.c320ee6a.chunk.css"
+    "revision": "77c7e450e277be4492a0",
+    "url": "/huhyi-website/static/css/main.f63426dc.chunk.css"
   },
   {
-    "revision": "5171d85674856fbbd3bb",
-    "url": "/huhyi-website/static/js/2.ce24102b.chunk.js"
+    "revision": "a3e3770c7024b7dc3ad7",
+    "url": "/huhyi-website/static/js/2.32b715be.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/huhyi-website/static/js/2.ce24102b.chunk.js.LICENSE.txt"
+    "url": "/huhyi-website/static/js/2.32b715be.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "795f24d510ced02abcee",
-    "url": "/huhyi-website/static/js/main.0fb8cf26.chunk.js"
+    "revision": "77c7e450e277be4492a0",
+    "url": "/huhyi-website/static/js/main.96dbd659.chunk.js"
   },
   {
-    "revision": "17740060f6c3f7923fa8",
-    "url": "/huhyi-website/static/js/runtime-main.d951f492.js"
+    "revision": "14dfc5e86b95527290b3",
+    "url": "/huhyi-website/static/js/runtime-main.60bb92fd.js"
   },
   {
     "revision": "780f5849cec1ef1384f01ba22671d713",
@@ -166,6 +166,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c76b3068f8acf725078142835cb9c9db",
     "url": "/huhyi-website/static/media/SD-037.c76b3068.jpg"
+  },
+  {
+    "revision": "8017648ef9247f432803662319dc75e8",
+    "url": "/huhyi-website/static/media/brand-image.8017648e.jpg"
   },
   {
     "revision": "516054125e022458eb70de38860ffed9",
